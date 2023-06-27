@@ -1,3 +1,4 @@
+const timerElement = document.querySelector('.timer')
 const minutesElement = document.querySelector('.minutes')
 const secondsElement = document.querySelector('.seconds')
 const millisecondsElement = document.querySelector('.milliseconds')
@@ -48,6 +49,7 @@ const startTimer = () => {
 
 const stopTimer = () => {
   isStoped = true
+  timerElement.setAttribute('data-js', 'animate')
   stopButton.setAttribute('data-js', 'hidden')
   restartButton.removeAttribute('data-js')
   resetButton.removeAttribute('data-js')
@@ -57,6 +59,7 @@ const restartTimer = () => {
   isStoped = false
   restartButton.setAttribute('data-js', 'hidden')
   resetButton.setAttribute('data-js', 'hidden')
+  timerElement.removeAttribute('data-js')
   stopButton.removeAttribute('data-js')
 }
 
@@ -64,6 +67,7 @@ const resetTimer = () => {
   stopButton.setAttribute('data-js', 'hidden')
   restartButton.setAttribute('data-js', 'hidden')
   resetButton.setAttribute('data-js', 'hidden')
+  timerElement.removeAttribute('data-js')
   startButton.removeAttribute('data-js')
 
   timer.minutes = 0

@@ -81,9 +81,47 @@ h1 {
   border: 1px solid var(--secondary-color);
   border-radius: 1.25rem;
   outline: none;
+  overflow: hidden;
 
   padding: 0.75em 1.25em;
   cursor: pointer;
+
+  position: relative;
+  transition: scale ease-out 0.4s;
+}
+
+.button::before {
+  content: '';
+  display: block;
+  position: absolute;
+
+  background-color: var(--neutral-color);
+  opacity: 0.4;
+  height: 100%;
+  width: 2rem;
+
+  top: 0;
+  left: -2.5rem;
+
+  transform: skewX(-30deg);
+  transition: left ease-in 0.3s;
+}
+
+.button:hover {
+  scale: 1.125;
+}
+
+.button:hover::before {
+  left: calc(100% + 0.5rem);
+}
+
+.reset {
+  transition: all ease-out 0.4s;
+}
+
+.reset:hover {
+  background-color: var(--secondary-color);
+  color: var(--neutral-color);
 }
 
 .start,

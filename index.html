@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Cronômetro</title>
-</head>
-<body>
-  <main>
-    <h1>Cronômetro JS</h1>
-    <div class="timer">
-      <div class="minutes">00</div>
-      <span>:</span>
-      <div class="seconds">00</div>
-      <span>:</span>
-      <div class="milliseconds">000</div>
-    </div>
-    <div class="buttons">
-      <button class="button start">Iniciar</button>
-      <button data-js="hidden" class="button restart">Continuar</button>
-      <button data-js="hidden" class="button stop">Parar</button>
-      <button data-js="hidden" class="button reset">Reiniciar</button>
-  </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cronômetro</title>
+  </head>
+  <body>
+    <main>
+      <h1>Cronômetro JS</h1>
+      <div class="timer">
+        <div class="minutes">00</div>
+        <span>:</span>
+        <div class="seconds">00</div>
+        <span>:</span>
+        <div class="milliseconds">000</div>
+      </div>
+      <div class="buttons">
+        <button class="button start">Iniciar</button>
+        <button data-js="hidden" class="button restart">Continuar</button>
+        <button data-js="hidden" class="button stop">Parar</button>
+        <button data-js="hidden" class="button reset">Reiniciar</button>
+        <button data-js="hidden" class="button lap">Volta</button>
+      </div>
+      <div class="laps">
+        <!-- <div class="lap-info">
+          <span class="lap-number">Volta #1</span>
+          <span class="full-timer">00:39:830</span>
+          <span data-js="active-lap" class="lap-timer">00:39:830</span>
+        </div> -->
+      </div>
+    </main>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
